@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+        <remote name="Iverz"
+        fetch="https://github.com/asterixiverz" />
+
+        <!-- Sync trees -->
+        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="arrow-13.1" />
+
+</manifest>
