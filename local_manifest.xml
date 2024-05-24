@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+        <remote name="Iverz"
+        fetch="https://github.com/asterixiverz" />
+
+        <remote name="alter"
+        fetch="https://github.com/alternoegraha" />
+
+        <!-- Sync trees -->
+        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="droidx14-qpr3" />
+        <project path="vendor/xiaomi/fog" name="vendor_xiaomi_fog" remote="Iverz" revision="fourteen" />
+        <project path="kernel/xiaomi/fog" name="wwy_kernel_xiaomi_fog_rebase" remote="alter" revision="another-reset" />
+
+        <!-- Private keys -->
+        <project path="vendor/droidx-priv/keys" name="vendor_sign" remote="Iverz" revision="droidx" />
+
+</manifest>
