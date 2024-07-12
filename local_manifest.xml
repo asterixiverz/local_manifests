@@ -8,4 +8,7 @@
         <!-- Sync trees -->
         <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="arrow-13.1" />
 
+        <!-- Private keys -->
+        <project path="vendor/arrow/signing/keys" name="vendor_sign" remote="Iverz" revision="master" />
+
 </manifest>
