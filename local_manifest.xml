@@ -6,10 +6,16 @@
         fetch="https://github.com/asterixiverz" />
         <remote name="hk"
         fetch="https://gitea.com/Hirokixd" />
+        <remote name="hk2"
+        fetch="https://github.com/HK-ginkgo" />
+
 
         <!-- Replace Project -->
         <remove-project name="AfterlifeOS/system_core" />
         <project path="system/core" name="system_core" remote="hk" revision="14" clone-depth="1" />
+        <remove-project name="AfterlifeOS/hardware_afterlife_interfaces" />
+        <project path="hardware/afterlife/interfaces" name="hardware_afterlife_interfaces" remote="hk2" revision="14" clone-depth="1" />
+
 
         <!-- Sync trees -->
         <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="afterlife14-qpr2" />
