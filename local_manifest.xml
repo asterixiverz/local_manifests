@@ -2,13 +2,21 @@
 
 <manifest>
 
+        <remote  name="github"
+        fetch="https://github.com/" />
+        
         <remote name="Iverz"
         fetch="https://github.com/asterixiverz" />
 
-        <!-- Sync trees -->
-        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="arrow-13.1" />
+        <!-- Sync Trees -->
+        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="derp-13" />
+        <project path="kernel/xiaomi/fog" name="kernel_xiaomi_fog-msm4.19" remote="Iverz" revision="4.19" />
+        <project path="vendor/xiaomi/fog" name="vendor_xiaomi_fog" remote="Iverz" revision="thirteen" />
+
+        <!-- Sync Hardware Dependencies for Xiaomi Devices -->
+        <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="github" revision="lineage-20" />
 
         <!-- Private keys -->
-        <project path="vendor/arrow/signing/keys" name="vendor_sign" remote="Iverz" revision="master" />
+        <project path="vendor/derp/signing/keys" name="vendor_sign" remote="Iverz" revision="derp" />
 
 </manifest>
