@@ -11,7 +11,7 @@
         <!-- Sync trees -->
         <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="droidx14-qpr3" />
         <project path="vendor/xiaomi/fog" name="vendor_xiaomi_fog" remote="Iverz" revision="fourteen" />
-        <project path="kernel/xiaomi/fog" name="wwy_kernel_xiaomi_fog_rebase" remote="alter" revision="another-reset" />
+        <project path="kernel/xiaomi/fog" name="kernel_xiaomi_fog-msm4.19" remote="Iverz" revision="4.19" />
 
         <!-- Private keys -->
         <project path="vendor/droidx-priv/keys" name="vendor_sign" remote="Iverz" revision="droidx" />
