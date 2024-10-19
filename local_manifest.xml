@@ -16,9 +16,6 @@
         <!-- Sync Hardware Dependencies for Xiaomi Devices -->
         <project path="hardware/xiaomi" name="hardware_xiaomi" remote="Iverz" revision="thirteen-aosp" />
 
-        <!-- Sync Proprietary for MIUI Camera (Leica) -->
-        <project path="vendor/xiaomi/camera" name="soverzion-hq/proprietary_vendor_xiaomi_camera" remote="gitlab" revision="uvite-sm6225" />
-
         <!-- Sync Clang r450784d-->
         <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="tejas101k/clang-r450784d" remote="gitlab" revision="master" />
 
