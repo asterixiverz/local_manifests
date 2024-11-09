@@ -3,17 +3,17 @@
 <manifest>
 
         <remote name="Iverz"
-        fetch="https://github.com/asterixiverz" />
-
-        <remote name="alter"
-        fetch="https://github.com/alternoegraha" />
+                fetch="https://github.com/asterixiverz" />
 
         <!-- Sync trees -->
-        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="droidx14-qpr3" />
-        <project path="vendor/xiaomi/fog" name="vendor_xiaomi_fog" remote="Iverz" revision="fourteen" />
+        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="15-pixelage" />
+        <project path="vendor/xiaomi/fog" name="vendor_xiaomi_fog" remote="Iverz" revision="fifteen" />
         <project path="kernel/xiaomi/fog" name="kernel_xiaomi_fog-msm4.19" remote="Iverz" revision="4.19" />
 
+        <!-- Sync Hardware Dependencies for Xiaomi Devices -->
+        <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="pixelage" revision="15" />
+
         <!-- Private keys -->
-        <project path="vendor/droidx-priv/keys" name="vendor_sign" remote="Iverz" revision="droidx" />
+        <project path="vendor/pixelage-priv/keys" name="vendor_sign" remote="Iverz" revision="pixelage" />
 
 </manifest>
