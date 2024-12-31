@@ -8,6 +8,10 @@
         <remote name="Iverz"
         fetch="https://github.com/asterixiverz" />
 
+        <!-- lineage libcxx -->
+        <remove-project name="platform/external/libcxx" />
+        <project path="external/libcxx" name="LineageOS/android_external_libcxx" remote="github" revision="lineage-20.0"/>
+
         <!-- Sync Trees -->
         <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="derp-13" />
         <project path="kernel/xiaomi/fog" name="kernel_xiaomi_fog-msm4.19" remote="Iverz" revision="4.19" />
