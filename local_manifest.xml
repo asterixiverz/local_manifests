@@ -2,11 +2,74 @@
 
 <manifest>
 
+        <remote name="gitlab"
+        fetch="https://gitlab.com/" />
         <remote name="Iverz"
         fetch="https://github.com/asterixiverz" />
+        <remote name="xiaomi-peridot"
+        fetch="https://github.com/xiaomi-peridot" />
+
+        <!-- Remove Packages-->
+        <remove-project name="LineageOS/android_vendor_qcom_opensource_power"/>
+        <remove-project name="LineageOS/android_vendor_qcom_opensource_vibrator"/>
+        <remove-project name="LineageOS/android_vendor_qcom_opensource_usb"/>
+        <remove-project name="AfterlifeOS/hardware_xiaomi" />
+        <remove-project name="AfterlifeOS/hardware_qcom-caf_common" />
+
+        <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="xiaomi-peridot" >
+         <!-- add guard for AOSP hardware/qcom dir -->
+         <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+         <!-- add guards for CAF repositories -->
+         <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+         <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+         <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+         <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+         <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+         <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8650/audio/Android.mk" />
+         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8650/Android.bp" />
+         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8650/Android.mk" />
+        </project>
+
+        <!-- Sync HALs -->
+        <project path="hardware/qcom-caf/sm8650/audio/agm" name="vendor_qcom_opensource_agm" groups="qcom,lanai-audio" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="hardware/qcom-caf/sm8650/audio/pal" name="vendor_qcom_opensource_arpal-lx" groups="qcom,lanai-audio" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="hardware/qcom-caf/sm8650/audio/primary-hal" name="hardware_qcom_audio-ar" groups="qcom,lanai-audio" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="hardware/qcom-caf/sm8650/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lanai-vendor" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="hardware/qcom-caf/sm8650/dataipa" name="vendor_qcom_opensource_dataipa" groups="qcom,lanai-vendor" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="hardware/qcom-caf/sm8650/display" name="hardware_qcom_display" groups="qcom" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="hardware/qcom-caf/sm8650/media" name="hardware_qcom_media" groups="qcom,lanai-vendor" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="device/qcom/sepolicy_vndr/sm8650" name="device_qcom_sepolicy_vndr" groups="qcom,lanai-vendor" revision="lineage-21.0-caf-sm8650" remote="xiaomi-peridot" />
+        <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,lanai-vendor" revision="lineage-21.0" remote="xiaomi-peridot"/>
+        <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,lanai-vendor" revision="lineage-21.0" remote="xiaomi-peridot"/>
+        <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" groups="qcom,lanai-vendor" revision="lineage-21.0" remote="xiaomi-peridot"/>
 
         <!-- Sync trees -->
-        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="afterlife14-qpr2" />
+        <project path="device/xiaomi/peridot" name="device_xiaomi_peridot" remote="Iverz" revision="afl14" />
+        <project path="vendor/xiaomi/peridot" name="vendor_xiaomi_peridot" remote="Iverz" revision="14" />
+        <project path="device/xiaomi/peridot-kernel" name="device_xiaomi_peridot-kernel" remote="xiaomi-peridot" revision="udc" />
+        
+        <!-- Sync another needed Repositories-->
+        <project path="hardware/xiaomi" name="hardware_xiaomi" remote="xiaomi-peridot" revision="udc" />
+        <project path="device/xiaomi/peridot-miuicamera" name="device_xiaomi_peridot-miuicamera" remote="xiaomi-peridot" revision="14" />
+        <project path="vendor/xiaomi/peridot-miuicamera" name="Soverzion-HQ/vendor_xiaomi_peridot-miuicamera" remote="gitlab" revision="main" />
 
         <!-- Private keys -->
         <project path="vendor/after-priv/keys" name="vendor_sign" remote="Iverz" revision="afterlife14" />
