@@ -4,9 +4,33 @@
 
         <remote name="Iverz"
         fetch="https://github.com/asterixiverz" />
+        <remote name="PongDevelopment"
+        fetch="https://github.com/Pong-Development" />
+        <remote name="PongDevelopment2"
+        fetch="https://github.com/Nothing-phone-2-Development" />
+
+        <!-- Remove Packages-->
+        <remove-project name="LineageOS/android_hardware_qcom_display" revision="lineage-21.0-caf-sm8450" />
+        <remove-project name="LineageOS/android_hardware_qcom_audio-ar" revision="lineage-21.0-caf-sm8450" />
+        <remove-project name="LineageOS/android_vendor_qcom_opensource_arpal-lx" revision="lineage-21.0-caf-sm8450" />
+        <remove-project name="AfterlifeOS/hardware_afterlife_dolby" />
+        <remove-project name="AfterlifeOS/vendor_dolby_afterlife" />
+        <remove-project name="AfterlifeOS/device_qcom_sepolicy_vndr" revision="14-caf-sm8450" />
 
         <!-- Sync trees -->
-        <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="afterlife14-qpr2" />
+        <project path="device/nothing/Pong" name="device_nothing_Pong" remote="Iverz" revision="afl14" />
+        <project path="vendor/nothing/Pong" name="vendor_nothing_Pong" remote="Iverz" revision="14" />
+        <project path="kernel/nothing/sm8475" name="kernel_nothing_sm8475" remote="PongDevelopment" revision="lineage-21" />
+        <!-- <project path="kernel/nothing/sm8475-modules" name="kernel_nothing_sm8475-modules" remote="PongDevelopment" revision="15" /> -->
+        <project path="kernel/nothing/sm8475-devicetrees" name="kernel_nothing_sm8475-devicetrees" remote="PongDevelopment" revision="15" />
+
+        <!-- Sync Important Repositories -->
+        <project path="hardware/qcom-caf/sm8450/display" name="hardware_qcom-caf_sm8450_display" remote="PongDevelopment" revision="14" />
+        <project path="hardware/qcom-caf/sm8450/audio/primary-hal" name="android_hardware_qcom_audio-ar" remote="PongDevelopment2" revision="lineage-21.0-caf-sm8450" />
+        <project path="hardware/dolby" name="hardware_dolby" remote="Iverz" revision="14-afl" />
+        <project path="device/qcom/sepolicy_vndr/sm8450" name="device_qcom_sepolicy_vndr" remote="PongDevelopment" revision="14" />
+        <project path="hardware/qcom-caf/sm8450/audio/pal" name="vendor_qcom_opensource_arpal-lx" remote="PongDevelopment" revision="15" />
+        <project path="packages/apps/ParanoidGlyphPhone2" name="packages_apps_ParanoidGlyph" remote="PongDevelopment" revision="14" />
 
         <!-- Private keys -->
         <project path="vendor/after-priv/keys" name="vendor_sign" remote="Iverz" revision="afterlife14" />
