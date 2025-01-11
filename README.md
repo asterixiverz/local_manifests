@@ -2,7 +2,7 @@
 To initialize your device trees setup, use command:
 
 ```bash
-git clone -b fog_orion14 https://github.com/asterixiverz/local_manifests.git .repo/local_manifests
+git clone -b fog_orion-15.1 https://github.com/asterixiverz/local_manifests.git .repo/local_manifests
 ```
 
 Then sync with ROM source or sync standalone with this command:
