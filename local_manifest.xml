@@ -7,7 +7,7 @@
 
         <!-- Sync trees -->
         <project path="device/xiaomi/fog" name="device_xiaomi_fog" remote="Iverz" revision="orion-15.1" />
-        <project path="vendor/xiaomi/fog" name="vendor_xiaomi_fog" remote="Iverz" revision="fifteen-qpr1" />
+        <project path="vendor/xiaomi/fog" name="vendor_xiaomi_fog" remote="Iverz" revision="fifteen" />
         <project path="kernel/xiaomi/fog" name="kernel_xiaomi_fog-msm4.19" remote="Iverz" revision="4.19" />
 
         <!-- Sync hardware dependencies for Xiaomi Devices -->
