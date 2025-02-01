@@ -14,6 +14,6 @@
         <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="github" revision="lineage-22.1" />
 
         <!-- Sync private keys -->
-        <project path="vendor/lineage-priv/keys" name="vendor_sign" remote="Iverz" revision="orion" />
+        <project path="vendor/orion-priv/keys" name="vendor_sign" remote="Iverz" revision="orion" />
 
 </manifest>
